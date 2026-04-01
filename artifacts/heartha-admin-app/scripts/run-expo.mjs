@@ -17,6 +17,14 @@ const env = {
     : localNodeModules,
 };
 
+if (forwardedArgs[0] === "run:android") {
+  env.EXPO_NO_METRO_WORKSPACE_ROOT = "1";
+
+  if (forwardedArgs.includes("--variant") && forwardedArgs.includes("release")) {
+    env.NODE_ENV = "production";
+  }
+}
+
 const child = spawn(process.execPath, [cliEntrypoint, ...forwardedArgs], {
   cwd: projectRoot,
   env,

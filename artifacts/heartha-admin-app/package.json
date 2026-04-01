@@ -5,11 +5,13 @@
   "scripts": {
     "start": "node ./scripts/run-expo.mjs start",
     "android": "node ./scripts/run-expo.mjs start --android",
+    "android:release": "node ./scripts/run-expo.mjs run:android --variant release",
     "ios": "node ./scripts/run-expo.mjs start --ios",
     "web": "node ./scripts/run-expo.mjs start --web",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@babel/runtime": "^7.29.2",
     "@supabase/supabase-js": "^2.101.1",
     "expo": "~54.0.33",
     "expo-sqlite": "~16.0.10",
