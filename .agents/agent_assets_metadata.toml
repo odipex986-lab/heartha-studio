@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "vjMKQBXacM5M5gYZisLZ8"
+uri = "file://artifacts/heartha-studio/public/assets/hero.png"
+type = "image"
+title = "Hero dark luxury interior"
+
+[[generated]]
+id = "CAeUCQ0SJal-96TZtvTIQ"
+uri = "file://artifacts/heartha-studio/public/assets/portfolio/int-1.png"
+type = "image"
+title = "Minimalist living room warm lighting"
+
+[[generated]]
+id = "TL9P3_cDnHhLsbhYs-ri_"
+uri = "file://artifacts/heartha-studio/public/assets/portfolio/int-2.png"
+type = "image"
+title = "Luxury bathroom marble gold"
+
+[[generated]]
+id = "v3Z6iNQd52ZOoazeTu6NK"
+uri = "file://artifacts/heartha-studio/public/assets/portfolio/int-3.png"
+type = "image"
+title = "Contemporary open-plan kitchen"
+
+[[generated]]
+id = "Rf7bco2yjh0CmqduDrbRh"
+uri = "file://artifacts/heartha-studio/public/assets/portfolio/ext-1.png"
+type = "image"
+title = "Modern villa at sunset"
+
+[[generated]]
+id = "guGVxXJhpI39e22EmHSX5"
+uri = "file://artifacts/heartha-studio/public/assets/portfolio/ext-2.png"
+type = "image"
+title = "Minimalist facade with landscape"
+
+[[generated]]
+id = "Z97YXP3sHggb2trJgEF8d"
+uri = "file://artifacts/heartha-studio/public/assets/portfolio/ext-3.png"
+type = "image"
+title = "Contemporary residential twilight"
+
+[[generated]]
+id = "33tKgG4id8ZwHnbJSO4z7"
+uri = "file://artifacts/heartha-studio/public/assets/about.png"
+type = "image"
+title = "Architectural workspace render detail"

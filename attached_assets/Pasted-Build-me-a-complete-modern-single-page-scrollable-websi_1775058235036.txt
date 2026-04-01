@@ -1,0 +1,132 @@
+Build me a complete, modern, single-page scrollable website for 
+"Heartha Studio" — an architectural visualization studio 
+specializing in interior and exterior rendering.
+
+BRAND:
+- Studio name: Heartha Studio
+- Tagline: "We visualize spaces before they exist"
+- Tone: Luxury, minimal, warm, professional
+- Target client: Architects and real estate developers
+
+COLOR PALETTE:
+- Background: #0e0e0e (near black)
+- Surface/cards: #1a1814
+- Primary accent: #c9a96e (warm gold)
+- Text primary: #f5f0e8 (warm white)
+- Text secondary: #9e9689 (muted warm grey)
+
+TYPOGRAPHY:
+- Headings: Playfair Display (serif) — import from Google Fonts
+- Body: Inter (sans-serif) — import from Google Fonts
+
+TECH STACK:
+- Plain HTML, CSS, and vanilla JavaScript
+- No frameworks
+- Fully responsive (mobile + desktop)
+- Smooth scroll behavior
+
+---
+
+SECTIONS TO BUILD (in this order):
+
+1. NAVBAR
+- Logo text "HEARTHA STUDIO" in small caps, gold color
+- Links: Portfolio, Services, About, Contact
+- Sticky on scroll, transparent at top, dark background on scroll
+- Hamburger menu on mobile
+
+2. HERO SECTION
+- Full viewport height
+- Large background image placeholder (class: hero-image) — 
+  use a dark gradient overlay
+- Centered text layout:
+  - Small label above: "ARCHITECTURAL VISUALIZATION"
+  - Main heading: "We visualize spaces before they exist"
+  - Subtext: "Interior & Exterior Rendering for architects 
+    and developers"
+  - CTA button: "Start a Project" — links to contact section
+  - Gold underline animation on the heading
+
+3. PORTFOLIO SECTION
+- Title: "Our Work"
+- Two tab filters: "Interior" and "Exterior"
+- Masonry or CSS grid layout, 3 columns on desktop, 1 on mobile
+- 6 image placeholder cards with a subtle hover zoom effect 
+  and a gold overlay that shows project type on hover
+- Image placeholders should use aspect-ratio: 4/3 and a 
+  warm dark grey color
+
+4. SERVICES SECTION
+- Title: "What We Offer"
+- 3 cards in a row:
+  Card 1 — Interior Rendering
+    "Photorealistic interior visuals that help clients 
+    fall in love with a space before it's built."
+  Card 2 — Exterior Rendering
+    "Stunning facade and landscape visualizations for 
+    presentations, approvals, and marketing."
+  Card 3 — Walkthrough Animation
+    "Full 3D walkthroughs that bring your project to 
+    life in motion."
+- Each card has a gold icon placeholder, title, description, 
+  and a subtle border in gold on hover
+
+5. ABOUT SECTION
+- Split layout: left side text, right side tall image placeholder
+- Heading: "About Heartha Studio"
+- Body text: "We are a specialized architectural visualization 
+  studio crafting high-fidelity renders for architects, 
+  interior designers, and real estate developers. Every project 
+  we take on is treated with precision, artistic care, and a 
+  deep understanding of space and light."
+- A row of 3 stat counters below:
+  "50+ Projects" | "30+ Clients" | "3+ Years"
+- Animate the numbers counting up when section comes into view
+
+6. TESTIMONIALS SECTION
+- Title: "What Clients Say"
+- 2 testimonial cards side by side
+- Each card: quote text, client name, company name
+- Use placeholder text for now
+- Gold quotation mark as a decorative element
+
+7. CONTACT SECTION
+- Title: "Start a Project"
+- Subtitle: "Tell us about your project and we'll get 
+  back within 24 hours"
+- Form fields:
+  - Full Name
+  - Email
+  - Company / Studio Name
+  - Project Type (dropdown: Interior Rendering / Exterior 
+    Rendering / Walkthrough / Other)
+  - Project Deadline (date picker)
+  - Message / Brief
+  - Submit button: "Send Inquiry" in gold
+- Beside the form, show contact info:
+  - Email icon + placeholder email
+  - WhatsApp icon + placeholder number
+  - Instagram: @hearthastudio
+- Form should show a success message on submit 
+  (no backend needed, just a JS confirmation)
+
+8. FOOTER
+- "© 2026 Heartha Studio. All rights reserved."
+- Social links: Instagram, WhatsApp
+- Small nav links repeated
+
+---
+
+ADDITIONAL REQUIREMENTS:
+- Add a smooth scroll reveal animation (fade up) for each 
+  section as the user scrolls
+- Add a custom cursor — small gold dot that follows the mouse
+  on desktop
+- All image placeholders should have a shimmer/skeleton 
+  loading effect
+- Page should feel fast and lightweight
+- No placeholder text like "Lorem Ipsum" — use the actual 
+  copy I've written above
+- Add a subtle grain/noise texture overlay on the hero 
+  section for a premium feel
+- Make the portfolio tab switching animated (fade transition)
