@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
-import { Menu, X, Home, Building2, Play, Instagram, Phone, Mail, ArrowRight, Quote } from "lucide-react";
+import { Menu, X, Home, Building2, Play, Instagram, Phone, Mail, ArrowRight, Quote, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { createContactInquiry } from "@/lib/supabase";
 import { Toaster } from "@/components/ui/toaster";
 
 const contactFormSchema = z.object({
@@ -136,12 +137,29 @@ function App() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    toast({
-      title: "Inquiry Sent",
-      description: "We'll get back to you within 24 hours.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    try {
+      await createContactInquiry({
+        fullName: values.fullName,
+        email: values.email,
+        company: values.company,
+        projectType: values.projectType,
+        message: values.message,
+      });
+
+      toast({
+        title: "Inquiry Sent",
+        description: "Thanks for reaching out. We'll get back to you within 24 hours.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error("Failed to submit contact inquiry", error);
+      toast({
+        variant: "destructive",
+        title: "Inquiry Not Sent",
+        description: "Please try again in a moment or email hearthastudio@gmail.com directly.",
+      });
+    }
   }
 
   const portfolioItems = {
@@ -562,9 +580,18 @@ function App() {
                     )}
                   />
 
-                  <Button type="submit" size="lg" className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-12 py-6 text-sm tracking-widest uppercase group">
-                    Send Inquiry
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={form.formState.isSubmitting}
+                    className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-12 py-6 text-sm tracking-widest uppercase group"
+                  >
+                    {form.formState.isSubmitting ? "Sending..." : "Send Inquiry"}
+                    {form.formState.isSubmitting ? (
+                      <Loader2 className="ml-2 w-4 h-4 animate-spin" />
+                    ) : (
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    )}
                   </Button>
                 </form>
               </Form>
