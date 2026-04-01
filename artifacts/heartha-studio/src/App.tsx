@@ -127,7 +127,7 @@ function App() {
   };
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(contactFormSchema as never),
     defaultValues: {
       fullName: "",
       email: "",
