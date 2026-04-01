@@ -574,17 +574,17 @@ function App() {
               <div>
                 <h4 className="font-serif text-2xl mb-6">Contact Info</h4>
                 <div className="space-y-6">
-                  <a href="mailto:hello@hearthastudio.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
+                  <a href="mailto:hearthastudio@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                     <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center bg-card">
                       <Mail className="w-4 h-4" />
                     </div>
-                    hello@hearthastudio.com
+                    hearthastudio@gmail.com
                   </a>
-                  <a href="tel:+15552345678" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
+                  <a href="tel:+919645123926" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                     <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center bg-card">
                       <Phone className="w-4 h-4" />
                     </div>
-                    +1 (555) 234-5678
+                    +91 9645123926
                   </a>
                   <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                     <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center bg-card">
@@ -622,7 +622,7 @@ function App() {
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+919645123926" className="text-muted-foreground hover:text-primary transition-colors">
               <Phone className="w-5 h-5" />
             </a>
           </div>
